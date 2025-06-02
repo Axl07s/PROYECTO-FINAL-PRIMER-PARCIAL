@@ -86,19 +86,5 @@ pip install -r requirements.txt
 Ejecuta el juego:
 python main.py
 
-
-📂 Estructura de archivos
-stickman-fighters-kombat/
-├── assets/
-│   ├── audio/       # Efectos de sonido y música
-│── fondos      # Imágenes de fondo
-│── sprites     # Sprites de los personajes
-├── Mapas/           # Fondos de los niveles
-├── main.py          # Punto de entrada principal
-├── juego.py         # Lógica principal del juego
-├── menu_principal.py # Menú inicial
-├── menu_config.py   # Menú de configuración
-├── menu_pausa.py    # Menú de pausa
-└── README.md        # Este archivo
 🎯 Objetivo del Juego
 Derrota a tu oponente en un combate al mejor de 3 rondas. Usa estrategia para esquivar ataques y contraatacar en el momento adecuado.
