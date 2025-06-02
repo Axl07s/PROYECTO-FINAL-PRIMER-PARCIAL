@@ -1,4 +1,5 @@
 📌 Requisitos del Sistema
+
 Mínimos:
 Sistema Operativo: Windows 10 (64-bit) / macOS 10.15+ / Linux (Ubuntu 20.04+)
 
