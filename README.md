@@ -76,17 +76,16 @@ Combo: Golpea repetidamente para encadenar ataques
 ⚙️ Instalación
 Clona el repositorio:
 
-bash
 git clone https://github.com/tu-usuario/stickman-fighters-kombat.git
 cd stickman-fighters-kombat
+
 Instala las dependencias:
-
-bash
 pip install -r requirements.txt
-Ejecuta el juego:
 
-bash
+Ejecuta el juego:
 python main.py
+
+
 📂 Estructura de archivos
 stickman-fighters-kombat/
 ├── assets/
