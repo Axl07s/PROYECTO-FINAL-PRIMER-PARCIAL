@@ -61,28 +61,27 @@ class Juego:
             "jugador2": self.cargar_sprites_jugador(os.path.join(base_path, "Izquierda"), "2")
         }
         
-        # carga los sonidos del juego (salto y golpe) con el volumen especificado
+    # carga los sonidos del juego (salto y golpe) con el volumen especificado
     def cargar_sonidos(self, volumen_base=0.5):
-        try:
-            self.sonido_salto = pygame.mixer.Sound("assets/audio/salto.wav") # Sonido de salto
-            self.sonido_salto.set_volume(volumen_base * 0.8)  # # Golpe a volumen de base
-        except:
-            self.sonido_salto = None
-            print("⚠️ No se pudo cargar 'salto.wav'")
+        """Carga los sonidos mostrando warnings solo si fallan Y no existen los archivos"""
+        # Verificar primero si los archivos existen
+        if not os.path.exists("assets/audio/salto.wav"):
+            print("⚠️ Advertencia: El archivo 'salto.wav' no existe") # Si no existe, muestra advertencia
+        else:
+            try:
+                self.sonido_salto = pygame.mixer.Sound("assets/audio/salto.wav")
+                self.sonido_salto.set_volume(volumen_base * 0.8)
+            except Exception as e:
+                print(f"⚠️ Error cargando 'salto.wav': {e}") # Si falla, muestra error
 
-        try:
-            self.sonido_golpe = pygame.mixer.Sound("assets/audio/golpe.wav")
-            self.sonido_golpe.set_volume(volumen_base)  # 100% del volumen base
-        except:
-            self.sonido_golpe = None
-            print("⚠️ No se pudo cargar 'golpe.wav'")
-        try:
-                self.sonido_golpe = pygame.mixer.Sound("assets/audio/golpe.wav")
-                self.sonido_golpe.set_volume(0.6)
-        except:
-                self.sonido_golpe = None
-        print("⚠️ No se pudo cargar 'golpe.wav'")
-    
+        if not os.path.exists("assets/audio/golpe.wav"):
+            print("⚠️ Advertencia: El archivo 'golpe.wav' no existe") # Si no existe, muestra advertencia
+        else:
+            try:
+                self.sonido_golpe = pygame.mixer.Sound("assets/audio/golpe.wav") # Carga el sonido
+                self.sonido_golpe.set_volume(volumen_base)
+            except Exception as e:
+                print(f"⚠️ Error cargando 'golpe.wav': {e}") # Si falla, muestra error
     
     def cargar_sprites_jugador(self, path, tipo_jugador):
         # Diccionario con las animaciones disponibles
