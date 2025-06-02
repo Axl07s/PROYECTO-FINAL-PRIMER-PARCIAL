@@ -77,6 +77,7 @@ Combo: Golpea repetidamente para encadenar ataques
 Clona el repositorio:
 
 git clone https://github.com/tu-usuario/stickman-fighters-kombat.git
+
 cd stickman-fighters-kombat
 
 Instala las dependencias:
